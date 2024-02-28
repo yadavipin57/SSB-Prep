@@ -6,10 +6,10 @@
     text-decoration: none;
 }
 
-body{
+html, body{
     font-family: 'Poppins', Verdana, 'Geneva', Tahoma, sans-serif;
     font-size: 16px;
-    background: linear-gradient(to right, #00feba, #5f548a);
+    scroll-behavior: smooth;
 }
 
 header{
@@ -17,6 +17,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #212529;
     color: #fff;
 }
 
@@ -43,9 +44,7 @@ nav ul li a{
 
 footer{
     padding: 12px 72px;
-    background: linear-gradient(to right, #00feba, #5f548a);
-    position: absolute;
-    bottom: 0px;
+    background-color: #212529;
     width: 100%;
     text-align: center;
     color: #fff;
@@ -75,4 +74,31 @@ footer{
 }
 .prep-gallery:hover{
     font-size: 1.25rem;
+}
+
+/* WAT Display  */
+
+.wat-display{
+    margin: 40vh 0 36px 0;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid rgb(51, 160, 255);
+}
+
+.start{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.start h1{
+    margin-right: 32px;
+}
+.start-button{
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.wat-content{
+    margin: auto;
 }

@@ -9,7 +9,6 @@
 body{
     font-family: 'Poppins', Verdana, 'Geneva', Tahoma, sans-serif;
     font-size: 16px;
-    background: linear-gradient(to right, #00feba, #5f548a);
 }
 
 header{
@@ -17,6 +16,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #212529;
     color: #fff;
 }
 
@@ -43,9 +43,7 @@ nav ul li a{
 
 footer{
     padding: 12px 72px;
-    background: linear-gradient(to right, #00feba, #5f548a);
-    position: absolute;
-    bottom: 0px;
+    background-color: #212529;
     width: 100%;
     text-align: center;
     color: #fff;
@@ -60,6 +58,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .prep-gallery{
