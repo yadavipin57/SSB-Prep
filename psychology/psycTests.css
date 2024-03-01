@@ -12,31 +12,32 @@ html, body{
     scroll-behavior: smooth;
 }
 
-.wat-set{
+.wat-set, .tat-set{
     margin: 48px auto;
     padding: 16px;
     width: 80%;
 }
-.wat-set h2{
+.wat-set h2, .tat-set h2{
     font-size: 48px;
     border-bottom: 1px solid #212529;
 }
-.wat-set-buttons{
+.wat-set-buttons, .tat-set-buttons{
     margin: 24px 0;
 }
 
-.wat-set-buttons button{
+.wat-set-buttons button, .tat-set-buttons button{
     margin: 24px;
     padding: 12px 18px;
     width: 20%;
     cursor: pointer;
 }
-.wat-set-buttons a{
+.wat-set-buttons a, .tat-set-buttons a{
     color: black;
 }
-/* WAT Display */
 
-.wat-display{
+/* WAT Display & TAT Display */
+
+.wat-display, .tat-display{
     margin: 54px 0;
     height: 100vh;
     width: 100%;
@@ -46,27 +47,32 @@ html, body{
 .start{
     height: 100%;
     display: flex;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
 .start h1{
     margin: 0 48px 0 0;
+    display: none;
 }
 .start-button{
     padding: 12px 24px;
     cursor: pointer;
+    display: none;
 }
 
-.wat-content{
+.wat-content, .tat-content{
     height: 80%;
     display: none;
     align-items: center;
     justify-content: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
-.wat-content p{
+.wat-content p, .tat-content p{
     font-size: 196px;
 }
+
 /* Restart test */
 
 .restart{
@@ -81,3 +87,4 @@ html, body{
     padding: 12px 24px;
     cursor: pointer;
 }
+  

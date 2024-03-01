@@ -1,4 +1,6 @@
 const setButtons = document.querySelectorAll('.wat-set-buttons a button')
+const selectAlert = document.querySelector('.select-alert')
+const startHeading = document.querySelector('.start h1')
 const startButton = document.querySelector('.start-button')
 const watContent = document.querySelector('.wat-content')
 const restart = document.querySelector('.restart')
@@ -8,6 +10,10 @@ let watWords = []
 
 setButtons.forEach((setButton) => {
     setButton.addEventListener('click', () => {
+
+        selectAlert.style.display = 'none'
+        startHeading.style.display = 'block'
+        startButton.style.display = 'block'
 
         console.log(setButton.textContent)
 
@@ -47,6 +53,12 @@ setButtons.forEach((setButton) => {
 
 function startTest(watWords) {
     startButton.addEventListener('click', () => {
+
+        if (watWords.length === 0) {
+            alert(`Please choose a set to begin.`)
+            return
+        }
+
         const startDiv = document.querySelector('.start')
         startDiv.style.display = 'none'
         displayWords()
