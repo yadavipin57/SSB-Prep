@@ -41,16 +41,10 @@ nav ul li a{
     color: #fff;
 }
 
-footer{
-    padding: 12px 72px;
-    background-color: #212529;
-    width: 100%;
-    text-align: center;
-    color: #fff;
-}
+/* Main Content  */
 
 .main-content{
-    margin: 64px auto;
+    margin: 144px auto;
     width: 80%;
 }
 
@@ -59,10 +53,11 @@ footer{
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    gap: 24px;
 }
 
 .prep-gallery{
-    width: 16%;
+    width: 196px;
     height: 196px;
     display: flex;
     align-items: center;
@@ -72,4 +67,16 @@ footer{
 }
 .prep-gallery:hover{
     font-size: 1.25rem;
+}
+
+/* Footer  */
+
+.absolute-footer{
+    padding: 24px 72px;
+    background-color: #212529;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
 }

@@ -1,0 +1,151 @@
+@media screen and (min-width: 720px) and (max-width: 1420px) {
+    header {
+        padding: 6px 36px;
+    }
+
+    .logo h1 {
+        font-size: 42px;
+    }
+
+    nav ul li {
+        margin: 0 12px 0 0;
+        font-size: 1.15rem;
+    }
+    .menu-icon {
+        display: none;
+    }
+
+    .main-content {
+        margin: 84px auto;
+    }
+
+    .wat-set h2,
+    .tat-set h2 {
+        font-size: 36px;
+    }
+
+    .wat-content p,
+    .tat-content {
+        font-size: 121px;
+    }
+
+    footer {
+        padding: 24px 64px;
+    }
+
+    .absolute-footer {
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 580px) and (max-width: 720px) {
+    header {
+        padding: 6px 28px;
+    }
+
+    .logo h1 {
+        font-size: 36px;
+    }
+
+    nav ul li {
+        margin: 0 8px 0 0;
+        font-size: 1rem;
+    }
+    .menu-icon {
+        display: none;
+    }
+
+    .main-content {
+        margin: 54px auto;
+    }
+
+    .wat-set h2,
+    .tat-set h2 {
+        font-size: 30px;
+    }
+
+    .wat-content p,
+    .tat-content {
+        font-size: 81px;
+    }
+
+    footer {
+        padding: 24px 48px;
+    }
+
+    .absolute-footer {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    header {
+        padding: 6px 28px;
+    }
+
+    .logo h1 {
+        font-size: 36px;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 1.25rem;
+        cursor: pointer;
+        /* Not working */
+    }
+
+    .menu-ul-list {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 70%;
+        height: 100%;
+        background-color: #212529;
+        transition: right 0.3s ease;
+        flex-direction: column;
+    }
+    .fa-xmark{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+    }
+    .menu-ul-list li {
+        margin: 12px 0;
+    }
+
+    .menu-ul-list.active {
+        right: 0;
+    }
+
+    .main-content {
+        margin: 24px auto;
+    }
+
+    .wat-set h2,
+    .tat-set h2 {
+        font-size: 22px;
+    }
+
+    .start h1 {
+        margin: 0 4px 0 0;
+        font-size: 20px;
+    }
+
+    .start-button {
+        padding: 4px 12px;
+    }
+
+    .wat-content p,
+    .tat-content {
+        font-size: 64px;
+    }
+
+    footer {
+        padding: 24px 12px;
+    }
+
+    .absolute-footer {
+        position: relative;
+    }
+}

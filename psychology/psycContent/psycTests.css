@@ -24,11 +24,16 @@ html, body{
 .wat-set-buttons, .tat-set-buttons{
     margin: 24px 0;
 }
-
+.buttons-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 .wat-set-buttons button, .tat-set-buttons button{
     margin: 24px;
     padding: 12px 18px;
-    width: 20%;
+    width: 196px;
     cursor: pointer;
 }
 .wat-set-buttons a, .tat-set-buttons a{
@@ -87,4 +92,7 @@ html, body{
     padding: 12px 24px;
     cursor: pointer;
 }
-  
+
+.select-alert{
+    text-align: center;
+}
