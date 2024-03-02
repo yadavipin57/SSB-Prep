@@ -12,6 +12,6 @@ menuIcon.addEventListener('click', () => {
 
 // Closing menu
 
-i.addEventListener('click', ()=>{
+i.addEventListener('click', () => {
     menuUlList.classList.toggle('active')
 })
