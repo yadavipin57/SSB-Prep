@@ -1,4 +1,4 @@
-@media screen and (min-width: 1420px) {
+@media screen and (min-width: 1400px) {
     header {
         padding: 6px 36px;
     }
@@ -31,6 +31,10 @@
 
     footer {
         padding: 24px 64px;
+    }
+    .sticky-footer{
+        position: fixed;
+        bottom: 0;
     }
 }
 

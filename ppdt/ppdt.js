@@ -28,7 +28,7 @@ function displayImage(index) {
         const startDiv = document.querySelector('.start')
         startDiv.style.display = 'none'
 
-        imageContainer.style.display = 'block'
+        imageContainer.style.display = 'flex'
         imageContainer.style.backgroundImage = `url('${imageFolder}${images[index]}')`
 
         setTimeout(() => {
@@ -36,7 +36,7 @@ function displayImage(index) {
             imageContainer.innerHTML = `<p class="write-action">Write Action</p>`
         }, 1000)
         setTimeout(() => {
-            imageContainer.innerHTML = `<p class="write-action">Write Story</p>`
+            imageContainer.innerHTML = `<p class="write-story">Write Story</p>`
         }, 3000)
         setTimeout(() => {
             imageContainer.style.display = 'none'

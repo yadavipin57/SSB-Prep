@@ -90,7 +90,7 @@ function displayWords() {
 
             return
         }
-    }, 15000)
+    }, 500)
 }
 
 const words = [

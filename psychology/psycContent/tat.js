@@ -64,7 +64,7 @@ function startTest(tatImages) {
                 if (tatIndex < tatImages.length) {
                     displayImage(tatIndex);
                 } else if (tatIndex === tatImages.length) {
-                    tatContent.style.display = 'none'
+                    imageContainer.style.display = 'none'
                     restart.style.display = 'flex'
 
                     goToTop.addEventListener('click', () => {
