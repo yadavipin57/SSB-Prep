@@ -64,9 +64,8 @@ function startTest(tatImages) {
                 if (tatIndex < tatImages.length) {
                     displayImage(tatIndex);
                 } else if (tatIndex === tatImages.length) {
-                    watContent.style.display = 'none'
+                    tatContent.style.display = 'none'
                     restart.style.display = 'flex'
-                    console.log(wattatIndex, watWords.length)
 
                     goToTop.addEventListener('click', () => {
                         setTimeout(() => {

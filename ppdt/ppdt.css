@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html, body{
+    font-family: 'Poppins', Verdana, 'Geneva', Tahoma, sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+.ppdt-set{
+    margin: 48px auto;
+    padding: 16px;
+    width: 80%;
+}
+.ppdt-set h2{
+    font-size: 48px;
+    border-bottom: 1px solid #212529;
+}
+.ppdt-set-buttons{
+    margin: 24px 0;
+}
+.buttons-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.ppdt-set-buttons button{
+    margin: 24px;
+    padding: 12px 18px;
+    width: 196px;
+    cursor: pointer;
+}
+.ppdt-set-buttons a{
+    color: black;
+}
+
+/* ppdt Display */
+
+.ppdt-display{
+    margin: 54px 0;
+    height: 100vh;
+    width: 100%;
+    border: 1px solid #212529;
+}
+
+.start{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.start h1{
+    margin: 0 48px 0 0;
+    display: none;
+}
+.start-button{
+    padding: 12px 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.ppdt-content{
+    height: 80%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.ppdt-content p{
+    font-size: 120px;
+    text-align: center;
+}
+
+/* Restart test */
+
+.restart{
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.restart button{
+    margin: 0 24px;
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.select-alert{
+    text-align: center;
+}

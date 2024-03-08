@@ -1,0 +1,12 @@
+h1, h2{
+    border-bottom: 3px solid black;
+}
+
+h2{
+    margin: 32px 0 0 0;
+}
+
+.about-content, .about-subcontent{
+    padding: 12px;
+    font-size: 1.15rem;
+}

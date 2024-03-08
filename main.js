@@ -14,4 +14,14 @@ menuIcon.addEventListener('click', () => {
 
 i.addEventListener('click', () => {
     menuUlList.classList.toggle('active')
+    i.style.display = 'none'
+})
+
+
+// Inside media query for screen less than 580px 
+
+const prepMenuList = document.querySelector('.prep-menu-list')
+
+prepMenuList.addEventListener('click', ()=>{
+    prepMenuList.classList.toggle('active')
 })

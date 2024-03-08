@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -23,38 +24,41 @@
                 <li><a href="index.html">Home</a></li>
                 <li class="preparation"><a href="#">Preparation</a>
                     <ul class="prep-menu-list">
-                        <li><a href="./ppdt/ppdt.html" target="_blank">PP&DT</a></li>
+                        <li><a href="#">PP&DT</a></li>
                         <li><a href="#">Interview</a></li>
-                        <li><a href="./psychology/psychology.html" target="_blank">Psychology</a></li>
+                        <li><a href="#">Psychology</a></li>
                         <li><a href="#">Group Task</a></li>
                         <li><a href="#">Conference</a></li>
                     </ul>
                 </li>
-                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
         </nav>
     </header>
 
-    <main>
-
-
-        <div class="main-content">
-            <section class="section">
-                <a href="./ppdt/ppdt.html" target="_blank" class="prep-gallery">PP&DT</a>
-                <a href="#" class="prep-gallery">Interview</a>
-                <a href="./psychology/psychology.html" target="_blank" class="prep-gallery">Psychology</a>
-                <a href="#" class="prep-gallery">Group Task</a>
-                <a href="#" class="prep-gallery">Conference</a>
-            </section>
+    <main class="main-content">
+        
+        <h1>CONTACT US</h1>
+        <div class="contact-us">
+            <p>
+                Have a question, feedback or any suggetion? We'd love to hear from you! Feel free to reach out to us using form panel given below, simply fill out the form and we'll solve all the queries and issues. You can also send us the new 'Words' and 'Pictures' for WAT and TAT respectively.
+            </p>
         </div>
 
+        <form>
+            <label for="name">Name</label>
+            <input type="text" name="Name" id="name" placeholder="Name">
+            <label for="email">Email</label>
+            <input type="email" name="Email" id="email" placeholder="Email">
+            <label for="feedback">Description</label>
+            <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="Feedback"></textarea>
+        </form>
 
     </main>
 
-    <footer class="absolute-footer">© SSB Prep - Your gateway to success in SSB interviews and military officer aspirant
-        resources.</footer>
+    <footer class="absolute-footer">© SSB Prep - Your gateway to success in SSB interviews and military officer aspirant resources.</footer>
 
 </body>
 <script src="main.js"></script>
