@@ -6,6 +6,9 @@ const watContent = document.querySelector('.wat-content')
 const restart = document.querySelector('.restart')
 const goToTop = document.querySelector('.go-to-top')
 
+// Load the beep sound
+const beepSound = new Audio('beep.mp3');
+
 let watWords = []
 
 setButtons.forEach((setButton) => {
@@ -57,6 +60,8 @@ function startTest(watWords) {
         if (watWords.length === 0) {
             alert(`Please choose a set to begin.`)
             return
+        } else {
+            beepSound.play();
         }
 
         const startDiv = document.querySelector('.start')
@@ -82,54 +87,64 @@ function displayWords() {
             restart.style.display = 'flex'
             console.log(watIndex, watWords.length)
 
+            // Play beep sound when the word changes
+            beepSound.play();
+
             goToTop.addEventListener('click', () => {
                 setTimeout(() => {
                     location.reload();
                 }, 500)
             })
-
             return
+        } else {
+            beepSound.play();
         }
-    }, 500)
+
+    }, 15 * 1000)
 }
 
 const words = [
-    "Time", "Love", "Money", "Sky", "Fire", "Water", "Friend", "Fear", "Joy", "Book", "Tree", "Dream", "Sleep",
-    "Music", "Work", "Family", "Hope", "Road", "Silence", "Flower", "Pain", "Strength", "Beauty", "Happiness",
-    "Knowledge", "Trust", "Health", "Change", "Adventure", "Power", "Food", "Space", "Wisdom", "Success",
-    "Nature", "Journey", "Dance", "Courage", "Winter", "Summer", "Laughter", "Rain", "Wind", "Mountain",
-    "Ocean", "Light", "Dark", "Truth", "Lie", "Morning", "Night", "Color", "Red", "Blue", "Green", "Yellow",
-    "Orange", "Purple", "Black", "White", "Mirror", "Reflection", "Anger", "Peace", "War", "Secret", "Memory",
-    "Future", "Past", "Present", "Lost", "Found", "Home", "Heart", "Mind", "Soul", "Chaos", "Order", "City",
-    "Country", "Forest", "Desert", "Balance", "Harmony", "Conflict", "Destination", "Discovery", "Mystery",
-    "Puzzle", "Solution", "Answer", "Question", "Sun", "Moon", "Stars", "Universe", "Energy", "Liberty",
-    "Prison", "Body", "Breath", "Earth", "Ice", "Heat", "Cold", "Shadow", "Image", "Reality", "Illusion",
-    "Nightmare", "Despair", "Hate", "Compassion", "Cruelty", "Tears", "Smile", "Sorrow", "Birth", "Death",
-    "Life", "Beginning", "Young", "Moment", "Clock", "Watch", "Distance", "Near", "Far", "Arrival",
-    "Departure", "Path", "Walk", "Run", "Music", "Noise", "Peace", "Adventure", "Routine", "Revolution",
-    "Evolution", "Progress", "Stagnation", "Stability", "Freedom", "Control", "Urban", "Mountain", "River",
-    "Ocean", "Sunrise", "Sunset", "Morning", "Night", "Air", "Snow", "Rain", "Storm", "Calm", "Light",
-    "Sun", "Star", "Planet", "Heaven", "Hell", "Angel", "Devil", "Ghost", "Mind", "Heart", "Energy",
-    "Wisdom", "Foolishness", "Knowledge", "Education", "Illiteracy", "Experience", "Inexperience", "Memory",
-    "Forgetfulness", "Past", "Present", "Future", "Now", "Later", "Sooner", "Yesterday", "Tomorrow", "Today",
-    "Perception", "Reality", "Consciousness", "Unconsciousness", "Awareness", "Ignorance", "Focus",
-    "Distraction", "Attention", "Neglect", "Interest", "Disinterest", "Curiosity", "Apathy", "Creativity",
-    "Imagination", "Practicality", "Possibility", "Impossibility", "Probability", "Certainty", "Possession",
-    "Loss", "Gain", "Sacrifice", "Achievement", "Failure", "Improvement", "Decline", "Growth", "Change",
-    "Chaos", "Order", "Security", "Insecurity", "Safety", "Danger", "Risk", "Reward", "Punishment", "Justice",
-    "Injustice", "Equality", "Inequality", "Wealth", "Poverty", "Success", "Defeat", "Victory", "Progress",
-    "Regression", "Competition", "Cooperation", "Community", "Isolation", "Society", "Individual", "Group",
-    "Alone", "Together", "Friendship", "Enmity", "Communication", "Miscommunication", "Agreement", "Disagreement",
-    "Compromise", "Resistance", "Acceptance", "Rejection", "Fame", "Obscurity", "Reputation", "Shame", "Pride",
-    "Humility", "Arrogance", "Confidence", "Doubt", "Certainty", "Ambiguity", "Clarity", "Confusion",
-    "Ignorance", "Wisdom", "Foolishness", "Experience", "Inexperience", "Memory", "Forgetfulness", "Past",
-    "Present", "Future", "Now", "Later", "Sooner", "Yesterday", "Tomorrow", "Today", "Perception", "Reality",
-    "Illusion", "Dream", "Nightmare", "Consciousness", "Unconsciousness", "Awareness", "Ignorance", "Focus",
-    "Distraction", "Attention", "Neglect", "Interest", "Disinterest", "Curiosity", "Apathy", "Creativity",
-    "Routine", "Imagination", "Practicality", "Possibility", "Impossibility", "Probability", "Certainty",
-    "Possession", "Loss", "Gain", "Sacrifice", "Achievement", "Failure", "Improvement", "Decline", "Growth",
-    "Stagnation", "Change", "Stability", "Adventure", "Routine", "Discovery", "Familiarity", "Innovation",
-    "Tradition", "Progress", "Regression", "Competition", "Cooperation", "Conflict", "Harmony", "Connection",
-    "Disconnection"
+    "CAREFUL", "AGREE", "BEAUTIFUL", "CANNOT", "CONFUSE", "BAD", "CROWD", "COMPLETE", "INSTRUCTION", "CHEAT",
+    "ENCOURAGEMENT", "CRY", "QUALITY", "COMPANY", "HONOUR", "DEFEAT", "REASON", "CONVERSATION", "OPPOSITION",
+    "DISTURB", "SPEED", "COOPERATION", "PARENTS", "DREAM", "SURE", "FRIENDSHIP", "SYMPATHY", "FEARFUL",
+    "ADVERTISEMENT", "GIVE", "TEAM", "HEIGHT", "BUSY", "HELP", "ASSERT", "HELPLESS", "ENFORCE", "TRUTH",
+    "CONTRIBUTE", "HIGH", "FILMS", "UNTOUCHABILITY", "EXPLOITATION", "HINT", "ALOOF", "BLESSING", "HOLIDAY",
+    "MOVEMENT", "BLUFF", "EMPLOY", "INJURED", "PRECIOUS", "BRING", "INSTRUCTOR", "LIFE", "REAL", "CLASS",
+    "RANK", "LONELY", "CHOICE", "CO-EDUCATION", "CHAMPION", "DETERIORATE", "CURE", "COOPERATE", "CLEVER",
+    "DISEASE", "DEMAND", "FRIEND", "COMPEL", "DOCTOR", "FOREST", "HOME", "CROWD", "EARN", "INSTRUCTION",
+    "LIE", "PARTIALITY", "EXERCISE", "PATRIOTISM", "PRIDE", "GET", "TEASE", "CONSOLE",
+    "HARD", "GRADUATE", "TRAITOR", "ELDERS", "HIKING", "IMAGINATION", "UNION", "NURSE", "IMPROVEMENT",
+    "UNITY", "LIEUTENANT", "LATE", "LISTEN", "VULGAR", "SATISFY", "RULE", "WOMAN", "PRESIDENT", "NERVOUS",
+    "DOMINATION", "ADVERSITY", "EFFORT", "CHARACTER", "RESPONSIBILITY", "DISCIPLINE", "ENCOURAGE", "BRAVE", "SUCCESS", "GREAT", "AMBITION", "DETERMINATION", "HAPPINESS", "WILLPOWER", "ACHIEVEMENT",
+    "PROGRESS", "DETERMINED", "PERSISTENCE", "COMMITMENT", "PRACTICE", "DEDICATION", "LEADERSHIP", "VICTORY",
+    "PERSEVERANCE", "FOCUS", "STRENGTH", "CHALLENGE", "INSPIRATION", "WINNER", "POSITIVE", "GOAL", "OPTIMISM", "BRAVERY", "BUSY", "ROMANCE", "CCURE", "FILMS", "SHOW", "DECIDE", "MOVEMENT", "SMART", "DIFFERENCE",
+    "NOVEL", "SON", "INSTRUCTION", "PURCHASE", "UNION", "LESSON", "COOPERATE", "ASSIST", "MEANING", "FRIENDLY",
+    "BEHAVIOUR", "PRACTICAL", "GIVE", "CLASS", "REPORT", "INTERFERENCE", "EXCEPT", "BOOK", "PLAY", "EXCUSE",
+    "ADMIRE", "ABOVE", "DESIRE", "CROWD", "EXPLOITATION", "EXERCISE", "FOLLOWER", "MAJORITY", "GAME", "HONOUR",
+    "CONTRIBUTION", "GET", "IMPARTIAL", "DISMISS", "HUACKING", "MOTHER", "ACTIVE", "IMPROVE", "PATRIOT", "BLOOD",
+    "LATE", "PRINCIPAL", "BREAK", "NECESSITY", "PUNISH", "COMPLETE", "NOTHING", "SUPPORT", "CURSE", "PLEASURE", "BRAVERY", "LESSON", "BUSY", "COOPERATE", "ROMANCE", "ASSIST", "ADMIRE", "MOTHER", "ABOVE", "ACTIVE",
+    "DESIRE", "IMPROVE", "CURE", "MEANING", "FILMS", "FRIENDLY", "SHOW", "BEHAVIOUR", "CROWD", "PATRIOT",
+    "EXPLOITATION", "BLOOD", "EXERCISE", "LATE", "DECIDE", "PRACTICAL", "MOVEMENT", "GIVE", "SMART", "CLASS",
+    "FOLLOWER", "PRINCIPAL", "MAJORITY", "BREAK", "GAME", "NECESSITY", "DIFFERENCE", "REPORT", "NOVEL",
+    "INTERFERENCE", "SON", "EXCEPT", "HONOUR", "PUNISH", "CONTRIBUTION", "GET", "NOTHING", "INSTRUCTION",
+    "BOOK", "PURCHASE", "PLAY", "UNION", "EXCUSE", "IMPARTIAL", "SUPPORT", "DISMISS", "HUACKING", "PLEASURE",
+    "CURSE", "DISMISS", "ARMY", "HIDE", "SUPPORT", "CHOICE", "LETTER", "WELFARE", "EDUCATED", "MODERN", "CONSOLE", "PROBLEM",
+    "PLAY", "CONTRIBUTE", "READ", "RICH", "BATCH", "REMEMBER", "ROGUE", "ACTION", "RIGHT", "THIEF", "ACTIVE",
+    "SCORE", "TIDY", "CONFIDENCE", "TASK", "PUTY", "DASH", "UNIVERSITY", "EXCUSE", "DETERIORATE", "ENFORCE",
+    "ADMIRE", "DIE", "MACHINE GUN", "COMMAND", "EXPECT", "MODEL", "CONVINCE", "HELPLESS", "MOVEMENT", "FUNNY",
+    "UTTLE", "NOVEL", "HEADMASTER", "LOSS", "BAD", "PARTIALITY", "MOVE", "CHANGE", "PRAISE", "MUST", "CO-EDUCATION",
+    "PREVENT", "NOISE", "COMPANY", "SCHOLARSHIP", "OPERATION", "DOUBT", "SELFLESS", "OVERCOME", "AMBITION", "BOARDER", "FAVOUR", "ATTACK", "ANGER", "CHILDHOOD", "HELPFUL", "COURAGE", "BLUNDER", "COMPANY",
+    "HERO", "DOCTOR", "BRAVERY", "MEND", "DISLIKE", "GIVE", "OBEDIENCE", "SELFLESS", "DOWN", "FEELINGS", "CURE",
+    "PATRIOTISM", "DISOBEY", "COOP", "POWER", "UNIFORM", "EFFORT", "FIGHTING", "FIND", "PICTURE", "DISPUTE",
+    "NAUGHTY", "PUNISH", "BABY", "FEAR", "GOAL", "PUZZLE", "STUDY", "SHOW", "UNION", "CHARMING", "ELECTION",
+    "HINT", "LATE", "QUALIFICATION", "BETTER", "SMART", "UNSOCIAL", "EXAMPLE", "CONTRIBUTION", "IRRITATE",
+    "LONELY", "BOOK", "BRING", "GOVERN", "LOVE", "MAKE", "DRINK", "GOVERNOR", "LUCK", "CONSIDER", "AMICABLE", "IMPRESS", "CREATE", "DONOR", "INITIATIVE", "ROSE", "SATISFACTION", "ACTIVE", "BRAIN",
+    "EXCUSE", "CONFESS", "BRIGHT", "ADOPT", "CHEERFUL", "AWARE", "ACCOMPANY", "DANGER", "ARRANGE", "FRIEND",
+    "DETERMINE", "ACADEMY", "FAITH", "PHYSICAL", "ASTRONOMY", "ARROGANT", "ARTILLERY", "ASSUMPTION", "FELLOW",
+    "AXE", "ABILITY", "HAPPY", "BRAVE", "ANALYSIS", "LEADER", "KILL", "ANSWER", "LIVELY", "BOLD", "PLACEMENT",
+    "PERSUADE", "JUMP", "JUPITER", "SMILE", "BATTLE", "AFFECTION", "CONFIDENCE", "INFANTRY", "DEDICATE", "SUSPEND",
+    "BOMBER", "COOPERATION", "CHALLENGE", "OBSTACLE", "DISLIKE", "CONVINCE", "HIGH", "ATTACHMENT", "DECISION",
+    "DEFENCE"
 ];
 
+console.log(words.length);

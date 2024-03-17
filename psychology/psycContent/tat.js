@@ -6,6 +6,9 @@ const imageContainer = document.querySelector('.tat-content');
 const restart = document.querySelector('.restart')
 const goToTop = document.querySelector('.go-to-top')
 
+// Load the beep sound
+const beepSound = new Audio('beep.mp3');
+
 const imageFolder = './TAT Img/';
 
 
@@ -45,15 +48,19 @@ function startTest(tatImages) {
 
         let tatIndex = 0;
 
+        beepSound.play();
+
         function displayImage(tatIndex) {
 
             imageContainer.style.display = 'flex'
 
+            beepSound.play();
+
             imageContainer.style.backgroundImage = `url('${imageFolder}${tatImages[tatIndex]}')`;
             setTimeout(() => {
                 imageContainer.style.backgroundImage = '';
-                setTimeout(displayBlankScreen, 500); // 2+2 => Display blank screen for 4 minutes
-            }, 500); // Display image for 30 seconds
+                setTimeout(displayBlankScreen, 2000); // 2+2 => Display blank screen for 4 minutes
+            }, 2000); // Display image for 30 seconds
         }
 
         function displayBlankScreen() {
