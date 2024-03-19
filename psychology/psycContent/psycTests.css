@@ -13,6 +13,37 @@ body {
     scroll-behavior: smooth;
 }
 
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 24px 0 0;
+    font-size: 1.25rem;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+.prep-menu-list {
+    padding: 12px;
+    display: none;
+    position: relative;
+    background-color: #212529;
+}
+
+.prep-menu-list li {
+    padding: 4px;
+}
+
+.preparation:hover .prep-menu-list {
+    display: block;
+    position: absolute;
+}
+
 .wat-set,
 .tat-set {
     margin: 48px auto;
@@ -34,6 +65,18 @@ body {
     font-size: 20px;
     width: fit-content;
     cursor: pointer;
+}
+
+.instructions {
+    margin: 16px auto;
+    padding: 16px;
+    background-color: #cdcdcd;
+    width: 720px;
+}
+
+.instructions ul li {
+    margin: 8px 0 0 12px;
+    list-style-type: disc;
 }
 
 .wat-set-buttons,

@@ -38,7 +38,7 @@
     }
 }
 
-@media screen and (min-width: 720px) and (max-width: 1420px) {
+@media screen and (min-width: 720px) and (max-width: 1400px) {
     header {
         padding: 6px 36px;
     }
@@ -56,7 +56,7 @@
     }
 
     .main-content {
-        margin: 84px auto;
+        margin: 60px auto;
     }
 
     .wat-set h2,

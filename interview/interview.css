@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,13 +6,12 @@
     text-decoration: none;
 }
 
-html, body{
+body {
     font-family: 'Poppins', Verdana, 'Geneva', Tahoma, sans-serif;
     font-size: 16px;
-    scroll-behavior: smooth;
 }
 
-header{
+header {
     padding: 12px 72px;
     display: flex;
     align-items: center;
@@ -21,74 +20,60 @@ header{
     color: #fff;
 }
 
-.logo h1{
+.logo h1 {
     font-size: 54px;
 }
-.logo h1 a{
+
+.logo h1 a {
     color: #fff;
 }
 
-nav ul{
+nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-nav ul li{
+nav ul li {
     margin: 0 24px 0 0;
     font-size: 1.25rem;
 }
-nav ul li a{
+
+nav ul li a {
     color: #fff;
 }
 
-.prep-menu-list{
+.prep-menu-list {
     padding: 12px;
     display: none;
     position: relative;
     background-color: #212529;
 }
-.prep-menu-list li{
+
+.prep-menu-list li {
     padding: 4px;
 }
-.preparation:hover .prep-menu-list{
+
+.preparation:hover .prep-menu-list {
     display: block;
     position: absolute;
 }
 
 /* Main Content  */
 
-.main-content{
-    margin: 144px auto;
+main {
+    margin: 60px auto;
     width: 80%;
 }
 
-.section{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.prep-gallery{
-    width: 196px;
-    height: 196px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #124cec;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-}
-.prep-gallery:hover{
-    font-size: 1.25rem;
+main h2 {
+    font-size: 48px;
+    border-bottom: 1px solid #212529;
 }
 
 /* Footer  */
 
-footer{
+footer {
     padding: 24px 72px;
     background-color: #212529;
     width: 100%;

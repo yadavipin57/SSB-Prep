@@ -1,4 +1,6 @@
 const setButtons = document.querySelectorAll('.wat-set-buttons a button')
+const info = document.querySelector('.fa-info')
+const instructions = document.querySelecctor('.instructions')
 const selectAlert = document.querySelector('.select-alert')
 const startHeading = document.querySelector('.start h1')
 const startButton = document.querySelector('.start-button')
