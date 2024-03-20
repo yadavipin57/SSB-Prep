@@ -1,5 +1,4 @@
 const setButtons = document.querySelectorAll('.wat-set-buttons a button')
-const info = document.querySelector('.fa-info')
 const selectAlert = document.querySelector('.select-alert')
 const startHeading = document.querySelector('.start h1')
 const startButton = document.querySelector('.start-button')
@@ -21,35 +20,39 @@ setButtons.forEach((setButton) => {
 
         console.log(setButton.textContent)
 
-        switch (setButton.textContent) {
-            case 'Set 1':
-                watWords = words.slice(0, 60)
-                break;
-            case 'Set 2':
-                watWords = words.slice(60, 120)
-                break;
-            case 'Set 3':
-                watWords = words.slice(120, 180)
-                break;
-            case 'Set 4':
-                watWords = words.slice(180, 240)
-                break;
-            case 'Set 5':
-                watWords = words.slice(240, 300);
-                break;
-            case 'Set 6':
-                watWords = words.slice(300, 360);
-                break;
-            case 'Set 7':
-                watWords = words.slice(360, 420);
-                break;
-            case 'Set 8':
-                watWords = words.slice(420, 480);
-                break;
-            // case 'Set 9':
-            //     watWords = words.slice(480, 540);
-            //     break;
-        }
+        const setIndex = parseInt(setButton.textContent.split(' ')[1]) - 1;
+
+        watWords = words.slice(setIndex * 60, (setIndex + 1) * 60)
+
+        // switch (setButton.textContent) {
+        //     case 'Set 1':
+        //         watWords = words.slice(0, 60)
+        //         break;
+        //     case 'Set 2':
+        //         watWords = words.slice(60, 120)
+        //         break;
+        //     case 'Set 3':
+        //         watWords = words.slice(120, 180)
+        //         break;
+        //     case 'Set 4':
+        //         watWords = words.slice(180, 240)
+        //         break;
+        //     case 'Set 5':
+        //         watWords = words.slice(240, 300);
+        //         break;
+        //     case 'Set 6':
+        //         watWords = words.slice(300, 360);
+        //         break;
+        //     case 'Set 7':
+        //         watWords = words.slice(360, 420);
+        //         break;
+        //     case 'Set 8':
+        //         watWords = words.slice(420, 480);
+        //         break;
+        //     // case 'Set 9':
+        //     //     watWords = words.slice(480, 540);
+        //     //     break;
+        // }
         startTest(watWords)
 
     })
@@ -147,3 +150,5 @@ const words = [
     "BOMBER", "COOPERATION", "CHALLENGE", "OBSTACLE", "DISLIKE", "CONVINCE", "HIGH", "ATTACHMENT", "DECISION",
     "DEFENCE"
 ];
+
+console.log(words.length);
