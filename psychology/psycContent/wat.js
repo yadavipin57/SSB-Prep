@@ -10,7 +10,7 @@ const goToTop = document.querySelector('.go-to-top')
 const beepSound = new Audio('beep.mp3');
 
 let watWords = []
-
+                    //This arrow fn has to be written outside so that when required it can be called from anywhere
 setButtons.forEach((setButton) => {
     setButton.addEventListener('click', () => {
 
