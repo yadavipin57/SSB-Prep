@@ -9,60 +9,27 @@ const goToTop = document.querySelector('.go-to-top')
 // Load the beep sound
 const beepSound = new Audio('beep.mp3');
 
-let watWords = []
+let watWords;
 
-function selectesSet(setButton){
+function selectedSet(setButton) {
     setButton.addEventListener('click', () => {
-
+        const setIndex = parseInt(setButton.textContent.split(' ')[1]) - 1;
+        watWords = words.slice(setIndex * 60, (setIndex + 1) * 60)
         selectAlert.style.display = 'none'
         startHeading.style.display = 'block'
         startButton.style.display = 'block'
-
-        console.log(setButton.textContent)
-
-        const setIndex = parseInt(setButton.textContent.split(' ')[1]) - 1;
-
-        watWords = words.slice(setIndex * 60, (setIndex + 1) * 60)
-
-        // switch (setButton.textContent) {
-        //     case 'Set 1':
-        //         watWords = words.slice(0, 60)
-        //         break;
-        //     case 'Set 2':
-        //         watWords = words.slice(60, 120)
-        //         break;
-        //     case 'Set 3':
-        //         watWords = words.slice(120, 180)
-        //         break;
-        //     case 'Set 4':
-        //         watWords = words.slice(180, 240)
-        //         break;
-        //     case 'Set 5':
-        //         watWords = words.slice(240, 300);
-        //         break;
-        //     case 'Set 6':
-        //         watWords = words.slice(300, 360);
-        //         break;
-        //     case 'Set 7':
-        //         watWords = words.slice(360, 420);
-        //         break;
-        //     case 'Set 8':
-        //         watWords = words.slice(420, 480);
-        //         break;
-        //     // case 'Set 9':
-        //     //     watWords = words.slice(480, 540);
-        //     //     break;
-        // }
+        console.log(watWords);
         startTest(watWords)
-
     })
 }
-                    //This arrow fn has to be written outside so that when required it can be called from anywhere
-setButtons.forEach(selectedSet)
+
+setButtons.forEach((setButton) => {
+    selectedSet(setButton)
+})
+
 
 function startTest(watWords) {
     startButton.addEventListener('click', () => {
-
         if (watWords.length === 0) {
             alert(`Please choose a set to begin.`)
             return
@@ -73,19 +40,17 @@ function startTest(watWords) {
         const startDiv = document.querySelector('.start')
         startDiv.style.display = 'none'
         displayWords()
-        setButtons.forEach(selectedSet)
     })
 }
 
 function displayWords() {
-
     watContent.style.display = 'flex'
 
     let watIndex = 0
     const watContentWords = document.querySelector('.wat-content p')
     watContentWords.innerHTML = watWords[watIndex]
 
-    setInterval(() => {
+    const interval = setInterval(() => {
         watIndex++
         // watIndex = (watIndex + 1) % watWords.length; // ?
         watContentWords.innerHTML = watWords[watIndex]
@@ -100,7 +65,7 @@ function displayWords() {
             goToTop.addEventListener('click', () => {
                 setTimeout(() => {
                     location.reload();
-                }, 500)
+                }, 0)
             })
             return
         } else {
