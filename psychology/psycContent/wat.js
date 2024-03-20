@@ -10,8 +10,8 @@ const goToTop = document.querySelector('.go-to-top')
 const beepSound = new Audio('beep.mp3');
 
 let watWords = []
-                    //This arrow fn has to be written outside so that when required it can be called from anywhere
-setButtons.forEach((setButton) => {
+
+function selectesSet(setButton){
     setButton.addEventListener('click', () => {
 
         selectAlert.style.display = 'none'
@@ -56,7 +56,9 @@ setButtons.forEach((setButton) => {
         startTest(watWords)
 
     })
-})
+}
+                    //This arrow fn has to be written outside so that when required it can be called from anywhere
+setButtons.forEach(selectedSet)
 
 function startTest(watWords) {
     startButton.addEventListener('click', () => {
@@ -71,6 +73,7 @@ function startTest(watWords) {
         const startDiv = document.querySelector('.start')
         startDiv.style.display = 'none'
         displayWords()
+        setButtons.forEach(selectedSet)
     })
 }
 
