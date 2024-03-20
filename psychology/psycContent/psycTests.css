@@ -32,7 +32,8 @@ nav ul li a {
     padding: 12px;
     display: none;
     position: relative;
-    background-color: #212529;
+    background-color: #5783db;
+    z-index: 1000;
 }
 
 .prep-menu-list li {
@@ -40,7 +41,7 @@ nav ul li a {
 }
 
 .preparation:hover .prep-menu-list {
-    display: block;
+    display: flex;
     position: absolute;
 }
 
@@ -54,23 +55,14 @@ nav ul li a {
 .wat-set h2,
 .tat-set h2 {
     font-size: 48px;
-    border-bottom: 1px solid #212529;
+    border-bottom: 1px solid #5783db;
     position: relative;
-}
-
-.fa-info {
-    position: absolute;
-    right: 12px;
-    bottom: 0;
-    font-size: 20px;
-    width: fit-content;
-    cursor: pointer;
 }
 
 .instructions {
     margin: 16px auto;
     padding: 16px;
-    background-color: #cdcdcd;
+    background-color: #5783db50;
     width: 720px;
 }
 
@@ -89,6 +81,17 @@ nav ul li a {
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+.buttons-container button {
+    background-color: #5783db;
+    border: none;
+    border-radius: 4px;
+    transition: ease 0.1s;
+}
+
+.buttons-container button:hover {
+    background-color: #215fdd
 }
 
 .wat-set-buttons button,

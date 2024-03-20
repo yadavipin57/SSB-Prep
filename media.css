@@ -11,6 +11,7 @@
         margin: 0 12px 0 0;
         font-size: 1.15rem;
     }
+
     .menu-icon {
         display: none;
     }
@@ -32,7 +33,8 @@
     footer {
         padding: 24px 64px;
     }
-    .sticky-footer{
+
+    .sticky-footer {
         position: fixed;
         bottom: 0;
     }
@@ -51,12 +53,17 @@
         margin: 0 12px 0 0;
         font-size: 1.15rem;
     }
+
     .menu-icon {
         display: none;
     }
 
     .main-content {
         margin: 60px auto;
+    }
+
+    .instructions {
+        width: 90%;
     }
 
     .wat-set h2,
@@ -87,12 +94,17 @@
         margin: 0 8px 0 0;
         font-size: 1rem;
     }
+
     .menu-icon {
         display: none;
     }
 
     .main-content {
         margin: 54px auto;
+    }
+
+    .instructions {
+        width: 100%;
     }
 
     .wat-set h2,
@@ -127,7 +139,7 @@
     }
 
     .menu-ul-list {
-        position: fixed;
+        position: absolute;
         right: -100%;
         top: 0;
         width: 70%;
@@ -135,13 +147,16 @@
         background-color: #212529;
         transition: right 0.3s ease;
         flex-direction: column;
+        z-index: 1000;
     }
-    .fa-xmark{
+
+    .fa-xmark {
         position: absolute;
         top: 20px;
         right: 20px;
         font-size: 1.5rem;
     }
+
     .menu-ul-list li {
         margin: 12px 0;
     }
@@ -149,11 +164,18 @@
     .menu-ul-list.active {
         right: 0;
     }
-    .prep-ul-list.active{
+
+    .prep-ul-list.active {
         display: block;
     }
+
     .main-content {
         margin: 24px auto;
+    }
+
+    .instructions {
+        width: 100%;
+        font-size: 0.8rem;
     }
 
     .wat-set h2,
